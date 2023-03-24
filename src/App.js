@@ -65,8 +65,8 @@ function App() {
       
          <br></br>
         <div className="output">
-           <div className="previous-operand"></div>
-           <div className="current-operand"></div>
+           <div className="previous-operand">123,456</div>
+           <div className="current-operand">123,456</div>
         </div>
         <button onClick={resetInput} className="span-two">AC</button>
           {/* Add the resetInput or AC button */} 
