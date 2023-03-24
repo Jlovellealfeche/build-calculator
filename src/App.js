@@ -59,8 +59,8 @@ function App() {
         <h1>Simplest Working Calculator</h1> 
       </div> 
       <form> 
-        <p ref={resultRef}> 
-          {/* add the value of the current total */} 
+        <p ref={resultRef}>
+          {result}  {/* add the value of the current total */} 
         </p> 
         <input
           pattern="[0-9]" 
