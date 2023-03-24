@@ -57,23 +57,16 @@ function App() {
   // function total(e) {
   //   e.preventDefault();
   //   setResult(newResult);
-  // }
+  // this is the function for the = sign }
  
   return ( 
-    <div className="calculator-grid">
-      <div className="App"> 
-        <div> 
-          <h1>Simplest Working Calculator</h1> 
-        </div> 
+    <div className="App"> 
+      <div className="calculator-grid">
+      
+         <br></br>
         <div className="output">
            <div className="previous-operand"></div>
            <div className="current-operand"></div>
-           <input
-            pattern="[0-9]" 
-            ref={inputRef} 
-            type="number" 
-            placeholder="Type a number" 
-          /> 
         </div>
         <button onClick={resetInput} className="span-two">AC</button>
           {/* Add the resetInput or AC button */} 
@@ -99,19 +92,15 @@ function App() {
         <button>0</button>
         <button className="span-two"> = </button> {/* add thefunction the current total */}
 
-
+        <div> 
+          <h1>Simplest Working Calculator</h1> 
+        </div> <br></br>
 
 
         <form> 
           <p ref={resultRef}>
             {result}  {/* add the value of the current total */} 
           </p> 
-          
-          
-           
-          
-          
-          
           
           
           <span ref={resultRef}>{result}</span>
