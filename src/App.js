@@ -11,24 +11,33 @@ function App() {
  
   function plus(e) { 
     e.preventDefault(); 
+    // const inputVal = inputRef.current.value; 
+    // const newResult = result + Number(inputVal); 
+    // setResult(newResult);
     setResult((result) => result + Number(inputRef.current.value)); 
   }; 
  
   function minus(e) { 
     e.preventDefault();
-    setResult((result) => result - Number(inputRef.current.value));
+    const inputVal = inputRef.current.value;
+    const newResult = result - Number(inputVal)
+    setResult(newResult);
   	// Add the code for the minus function 
   };
  
   function times(e) { 
     e.preventDefault();
-    setResult((result) => result * Number(inputRef.current.value));
+    const inputVal = inputRef.current.value;
+    const newResult = result *  Number(inputVal)
+    setResult(newResult);
     // Add the code for the plus function 
   }; 
  
   function divide(e) { 
     e.preventDefault();
-    setResult((result) => result / Number (inputRef.current.value));
+    const inputVal = inputRef.current.value;
+    const newResult = result / Number(inputVal)
+    setResult(newResult);
     // Add the code for the divide function 
   };
  
