@@ -22,6 +22,11 @@ body {
   grid-template-rows: minmax( 7rem, auto) repeat(5, 6rem);
 }
 
+.calculator-grid > button {
+  font-size: 2rem;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
 .span-two {
   grid-column: span 2;
 }
@@ -36,6 +41,7 @@ body {
   padding: 2.5rem;
   word-wrap: break-word;
   word-break: break-all;
+  border-radius: 1rem 1rem 0 0;
 }
 
 .output .previous-operand {

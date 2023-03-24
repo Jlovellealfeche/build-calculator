@@ -50,7 +50,7 @@ function App() {
  
   function resetResult(e) { 
     e.preventDefault();
-    setResult(0);
+    setResult("");
   	// Add the code for the resetResult function 
   }; 
 
@@ -65,8 +65,8 @@ function App() {
       
          <br></br>
         <div className="output">
-           <div className="previous-operand">123,456</div>
-           <div className="current-operand">123,456</div>
+           <div className="previous-operand" ref={resultRef}>123,456</div>
+           <div className="current-operand">{result} 123,456</div>
         </div>
         <button onClick={resetInput} className="span-two">AC</button>
           {/* Add the resetInput or AC button */} 
@@ -92,9 +92,7 @@ function App() {
         <button>0</button>
         <button className="span-two"> = </button> {/* add thefunction the current total */}
 
-        <div> 
-          <h1>Simplest Working Calculator</h1> 
-        </div> <br></br>
+       
 
 
         <form> 
