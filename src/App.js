@@ -5,6 +5,7 @@ import {
 import './App.css';
 
 function App() {
+
  const inputRef = useRef(null); 
   const resultRef = useRef(null); 
   const [result, setResult] = useState(0); 
@@ -52,36 +53,71 @@ function App() {
     setResult(0);
   	// Add the code for the resetResult function 
   }; 
+
+  // function total(e) {
+  //   e.preventDefault();
+  //   setResult(newResult);
+  // }
  
   return ( 
-    <div className="App"> 
-      <div> 
-        <h1>Simplest Working Calculator</h1> 
+    <div className="calculator-grid">
+      <div className="App"> 
+        <div> 
+          <h1>Simplest Working Calculator</h1> 
+        </div> 
+        <div className="output">
+           <div className="previous-operand"></div>
+           <div className="current-operand"></div>
+           <input
+            pattern="[0-9]" 
+            ref={inputRef} 
+            type="number" 
+            placeholder="Type a number" 
+          /> 
+        </div>
+        <button onClick={resetInput} className="span-two">AC</button>
+          {/* Add the resetInput or AC button */} 
+        <button onClick={resetResult}>DEL</button>
+        {/* Add the resetResult or Del button */}
+        <button onClick={divide}> ÷ </button>
+          {/* Add the divide button */} 
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button onClick={times}>*</button>
+          {/* Add the multiply button */} 
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button onClick={plus}>+</button> 
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button onClick={minus}>-</button>
+          {/* Add the subtract button */}
+        <button>.</button>
+        <button>0</button>
+        <button className="span-two"> = </button> {/* add thefunction the current total */}
+
+
+
+
+        <form> 
+          <p ref={resultRef}>
+            {result}  {/* add the value of the current total */} 
+          </p> 
+          
+          
+           
+          
+          
+          
+          
+          
+          <span ref={resultRef}>{result}</span>
+        </form> 
       </div> 
-      <form> 
-        <p ref={resultRef}>
-          {result}  {/* add the value of the current total */} 
-        </p> 
-        <input
-          pattern="[0-9]" 
-          ref={inputRef} 
-          type="number" 
-          placeholder="Type a number" 
-        /> 
-        <button onClick={plus}>add</button> 
-        {/* Add the subtract button */} 
-        <button onClick={minus}>subtract</button>
-        {/* Add the multiply button */} 
-        <button onClick={times}>multiply</button>
-        {/* Add the divide button */} 
-        <button onClick={divide}>divide</button>
-        {/* Add the resetInput button */} 
-        <button onClick={resetInput}>reset input</button>
-        {/* Add the resetResult button */} 
-        <button onClick={resetResult}>reset result</button>
-        <span ref={resultRef}>{result}</span>
-      </form> 
-    </div> 
+    </div>
   ); 
 }
 
