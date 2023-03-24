@@ -1,4 +1,7 @@
-import logo from './logo.svg';
+import {
+  useState,
+  useRef
+} from "react";
 import './App.css';
 
 function App() {
@@ -12,14 +15,20 @@ function App() {
   }; 
  
   function minus(e) { 
+    e.preventDefault();
+    setResult((result) => result - Number(inputRef.current.value));
   	// Add the code for the minus function 
   };
  
   function times(e) { 
+    e.preventDefault();
+    setResult((result) => result * Number(inputRef.current.value));
     // Add the code for the plus function 
   }; 
  
   function divide(e) { 
+    e.preventDefault();
+    setResult((result) => result / Number (inputRef.current.value));
     // Add the code for the divide function 
   };
  
@@ -48,10 +57,15 @@ function App() {
         /> 
         <button onClick={plus}>add</button> 
         {/* Add the subtract button */} 
+        <button onClick={minus}>subtract</button>
         {/* Add the multiply button */} 
+        <button onClick={times}>multiply</button>
         {/* Add the divide button */} 
+        <button onClick={divide}>divide</button>
         {/* Add the resetInput button */} 
+        <button onClick={resetInput}>reset input</button>
         {/* Add the resetResult button */} 
+        <button onClick={resetResult}>reset result</button>
       </form> 
     </div> 
   ); 
