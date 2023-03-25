@@ -24,6 +24,7 @@ body {
 }
 
 .calculator-grid > button {
+  cursor: pointer;
   font-size: 2rem;
   font-family:Georgia, 'Times New Roman', Times, serif;
   border: 1px solid hsl(0, 0%, 100%);
