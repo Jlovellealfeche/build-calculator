@@ -57,7 +57,11 @@ function evaluate({currentOperand, previousOperand, operation}) {
   if (isNaN(prev) || isNaN (current)) return ""
   let computation = ""
   switch (operation) {
-    
+    case "+": 
+      computation = prev + current
+      break
+    case "-":
+  
   }
 }
 
