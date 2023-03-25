@@ -1,3 +1,4 @@
+/* eslint-disable default-case */
 import { useReducer} from "react";
 import DigitButton from "./DigitButton";
 import OperationButton from "./OperationButton";
@@ -124,19 +125,23 @@ function evaluate({currentOperand, previousOperand, operation}) {
   const current = parseFloat(currentOperand)
   if (isNaN(prev) || isNaN (current)) return ""
   let computation = ""
+
   switch (operation) {
     case "+": 
       computation = prev + current
-      break
+      break;
+
     case "-":
       computation = prev - current
-      break
+      break;
+
     case "*":
       computation = prev * current
-      break
+      break;
+      
     case "÷":
       computation = prev / current
-      break
+      break;
   }
 
   return computation.toString()
